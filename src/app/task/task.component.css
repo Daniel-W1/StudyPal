@@ -1,0 +1,23 @@
+.card{
+    max-width: 70rem;
+    margin: 1rem;
+    box-shadow: 0 0 .5rem #ccc;
+    padding: 2rem;
+    border-radius: 1em;
+}
+
+.body{
+    border-bottom: .1rem solid #ccc;
+}
+.info{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+    margin: 0 .3rem;
+}
+.tags{
+    padding-top: .5rem;
+}
