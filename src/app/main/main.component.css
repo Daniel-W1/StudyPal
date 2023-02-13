@@ -1,0 +1,61 @@
+
+.text{
+    width: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    background-color: rgb(51, 41, 41, .4);
+    padding: 20px;
+    font-size: 20px;
+}
+
+.logo-text{
+    font-size: 5em;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    font-weight: bold;
+    color: rgb(235, 154, 4);
+    cursor: pointer;
+    transition: all .3s ;
+}
+
+.logo-text:hover{
+    text-shadow: 0 1px 1px #747474;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/home.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.direction{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(171, 158, 158, .7);
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.direction:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+.arrow-down{
+    font-size: 30px;
+
+}
