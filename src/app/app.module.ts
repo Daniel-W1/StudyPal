@@ -30,6 +30,8 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { UserpostComponent } from './userpost/userpost.component';
+
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     FooterComponent,
     NavBarComponent,
     SignUpFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    UserpostComponent
   ],
   imports: [
     BrowserModule,
