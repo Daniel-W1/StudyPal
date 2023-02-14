@@ -1,0 +1,55 @@
+.container{
+    box-shadow: 0 0 2rem #ccc;
+    padding: 3rem;
+    width: 50rem;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: .2rem solid #ccc;
+    padding-bottom: 1rem;
+    color: #555;
+}
+.profile-pic-edit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.profile-pic img{
+    width: 100%;
+}
+button{
+    margin-left: 3rem;
+}
+.profile-pic{
+    width: 10rem;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.resume{
+    display: flex;
+    align-items: center;
+}
+.resume h2{
+    font-size: 1.2rem;
+    padding: .5rem .7rem;
+    background-color: #eee;
+    margin-top: 1rem;
+    color: #555;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+#confirm-btn{
+    padding: 1.3rem 2rem;
+}
