@@ -20,8 +20,7 @@ import { CardComponent } from './card/card.component';
 import {MatChipsModule} from '@angular/material/chips';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import {MatTabGroup, MatTabsModule} from '@angular/material/tabs';
-
-
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +30,8 @@ import {MatTabGroup, MatTabsModule} from '@angular/material/tabs';
     ScrollMainComponent,
     MainComponent,
     CompTaskComponent,
-    CardComponent
+    CardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
