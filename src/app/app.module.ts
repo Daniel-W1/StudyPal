@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -25,15 +24,18 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { UserpostComponent } from './userpost/userpost.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { UserPost2Component } from './user-post2/user-post2.component';
+import { UserpostFormComponent } from './userpost-form/userpost-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -53,7 +55,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LoginFormComponent,
     UserpostComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    UserpostComponent,
+    UserPost2Component,
+    UserpostFormComponent,
+    TaskComponent
+
 
   ],
   imports: [
@@ -74,14 +81,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
