@@ -31,6 +31,9 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { UserpostComponent } from './userpost/userpost.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 
 
@@ -48,7 +51,10 @@ import { UserpostComponent } from './userpost/userpost.component';
     NavBarComponent,
     SignUpFormComponent,
     LoginFormComponent,
-    UserpostComponent
+    UserpostComponent,
+    HomeComponent,
+    PageNotFoundComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,5 @@
-.card-container{
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    margin: 0 auto;
-}
+.wrapper{
+    min-height: 100vh;
+    display: block;
+  }
+  

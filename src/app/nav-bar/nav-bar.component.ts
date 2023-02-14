@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit  {
       showOnDesktop:true,
     },
     {
-      label: 'Post',
+      label: 'Posts',
       icon: 'publish',
       showOnMobile:false,
       showOnTablet:false,

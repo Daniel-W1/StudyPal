@@ -9,7 +9,10 @@
     <button mat-button *ngFor="let item of menuItems" 
         [fxShow]="item.showOnDesktop" 
         [fxShow.xs]="item.showOnMobile"
-        [fxShow.sm]="item.showOnTablet">
+        [fxShow.sm]="item.showOnTablet"
+        [routerLink]="item.label"
+        [class] = "'hover-underline-animation'"
+        >
 
         <mat-icon class="mr">{{item.icon}}</mat-icon>
         {{item.label}}
@@ -20,17 +23,17 @@
         </button>
         <mat-menu #dropMenu="matMenu" >
             
-            <ng-container *ngFor="let item of menuItems"   [class] = "'hover-underline-animation'">
+            <ng-container *ngFor="let item of menuItems" >
+
                 <div [fxShow]="!item.showOnDesktop" 
                      [fxShow.sm]="!item.showOnTablet" 
-                     [fxShow.xs]="!item.showOnMobile" 
-                     >
-                    <button mat-ripple  mat-menu-item class="hover-underline-animation">
+                     [fxShow.xs]="!item.showOnMobile" >
+                    <button mat-ripple  mat-menu-item class="hover-underline-animation" [routerLink]="'/'+item.label">
                         <mat-icon class="mr">{{item.icon}}</mat-icon>
                         {{item.label}}
                     </button>
                     <mat-divider></mat-divider>
-                </div>
+                </div> 
             </ng-container>
         </mat-menu>
     </ng-container>
