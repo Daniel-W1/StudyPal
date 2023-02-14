@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Post a Question</h1>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter Question title</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Select tags</mat-label>
+        <mat-select>
+            <mat-option value="one">Math</mat-option>
+            <mat-option value="two">Algorithms</mat-option>
+            <mat-option value="two">Algebra</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter Question description</mat-label>
+        <textarea matInput></textarea>
+    </mat-form-field>
+
+    <div class="button-container">
+        <button id="post" mat-flat-button color="primary" class="post-btn">Post</button>
+    </div>
+</div>
