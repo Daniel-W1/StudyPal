@@ -24,7 +24,12 @@ import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
-
+import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 
 @NgModule({
@@ -38,7 +43,9 @@ import { MatDividerModule } from '@angular/material/divider';
     CompTaskComponent,
     CardComponent,
     FooterComponent,
-    NavBarComponent
+    NavBarComponent,
+    SignUpFormComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,11 @@ import { MatDividerModule } from '@angular/material/divider';
     MatTabsModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatButtonModule,
