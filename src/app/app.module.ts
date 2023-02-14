@@ -38,6 +38,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { PostsComponent } from './posts/posts.component';
 import { MyPostsComponent } from './my-posts/my-posts.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 
@@ -63,11 +64,10 @@ import { MyPostsComponent } from './my-posts/my-posts.component';
     UserpostFormComponent,
     TaskComponent,
     PostsComponent,
-    MyPostsComponent
-
-
+    MyPostsComponent,
+    EditProfileComponent
   ],
-  imports: [
+imports: [
     BrowserModule,
     AppRoutingModule,
     MatSlideToggleModule,
