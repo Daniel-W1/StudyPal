@@ -1,9 +1,11 @@
-.container{
-    width: 50%;
-    margin: 0 auto;
+    .container{
+    width: 70%;
+    margin: 1em auto;
     position: relative;
     height: 80vh;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 1.5em;
+    overflow: hidden;
 }
 .upper-profile{
     width: 100%;
@@ -22,6 +24,7 @@
     position: absolute;
     top: 6%;
     left: 2%;
+    border: .4em solid #000;
 }
 
 img{
@@ -35,20 +38,6 @@ img{
     top: 35%;
     padding: 0 15px;
     margin-top: 2em;
-}
-
-.icon1{
-    position: absolute;
-    top: 22%;
-    left: 20%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(206, 191, 173);
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    transition: all .3s;
 }
 
 .icon2{
@@ -65,7 +54,7 @@ img{
     transition: all .3s;
 }
 
-.icon2:hover, .icon1:hover{
+.icon2:hover{
     background-color: rgb(62, 42, 42);
     color: white;
 }
@@ -80,7 +69,7 @@ img{
     font-weight: lighter;
     font-size: .7em;
 }
-.btn1, .btn2{
+.btn1, .btn2, .btn3{
     width: 80px;
     height: 40px;
     padding: 10px 20px;
@@ -100,6 +89,23 @@ img{
 .btn2{
     right: 7em;
 }
-.btn1:hover, .btn2:hover{
+.btn1:hover, .btn2:hover, .btn3:hover{
     opacity: 0.8;
 }
+.btn3{
+    width: 10em;
+    right: 12em;
+}
+
+.rating{
+    position: absolute;
+    left: 23%;
+    top: 30%;
+}
+
+.tags{
+    position: absolute;
+    left: 5%;
+    bottom: 20%;
+}
+

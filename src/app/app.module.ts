@@ -36,6 +36,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { PostsComponent } from './posts/posts.component';
+import { MyPostsComponent } from './my-posts/my-posts.component';
 
 
 
@@ -59,7 +61,9 @@ import { MatSelectModule } from '@angular/material/select';
     UserpostComponent,
     UserPost2Component,
     UserpostFormComponent,
-    TaskComponent
+    TaskComponent,
+    PostsComponent,
+    MyPostsComponent
 
 
   ],
