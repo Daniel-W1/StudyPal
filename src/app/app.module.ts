@@ -24,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
+import { UserpostComponent } from './userpost/userpost.component';
 
 
 
@@ -38,7 +39,8 @@ import { MatDividerModule } from '@angular/material/divider';
     CompTaskComponent,
     CardComponent,
     FooterComponent,
-    NavBarComponent
+    NavBarComponent,
+    UserpostComponent
   ],
   imports: [
     BrowserModule,
