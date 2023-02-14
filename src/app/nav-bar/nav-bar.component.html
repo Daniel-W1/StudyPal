@@ -1,0 +1,37 @@
+<mat-toolbar fxLayout="row" color="primary" class="nav_bar">
+
+    <!-- <span>
+        <img src="./assets/logoImg.png" alt="" >
+    </span> -->
+   
+    
+    <span fxFlex class="studypal">Study Pal</span>
+    <button mat-button *ngFor="let item of menuItems" 
+        [fxShow]="item.showOnDesktop" 
+        [fxShow.xs]="item.showOnMobile"
+        [fxShow.sm]="item.showOnTablet">
+
+        <mat-icon class="mr">{{item.icon}}</mat-icon>
+        {{item.label}}
+    </button>
+    <ng-container>
+        <button mat-icon-button [matMenuTriggerFor]="dropMenu" [fxShow]="false" [fxShow.xs]="true" [fxShow.sm]="true"> 
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #dropMenu="matMenu" >
+            
+            <ng-container *ngFor="let item of menuItems"   [class] = "'hover-underline-animation'">
+                <div [fxShow]="!item.showOnDesktop" 
+                     [fxShow.sm]="!item.showOnTablet" 
+                     [fxShow.xs]="!item.showOnMobile" 
+                     >
+                    <button mat-ripple  mat-menu-item class="hover-underline-animation">
+                        <mat-icon class="mr">{{item.icon}}</mat-icon>
+                        {{item.label}}
+                    </button>
+                    <mat-divider></mat-divider>
+                </div>
+            </ng-container>
+        </mat-menu>
+    </ng-container>
+</mat-toolbar>

@@ -21,6 +21,12 @@ import {MatChipsModule} from '@angular/material/chips';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import {MatTabGroup, MatTabsModule} from '@angular/material/tabs';
 import { FooterComponent } from './footer/footer.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDividerModule } from '@angular/material/divider';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +37,8 @@ import { FooterComponent } from './footer/footer.component';
     MainComponent,
     CompTaskComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,9 @@ import { FooterComponent } from './footer/footer.component';
     MatChipsModule,
     NgxStarRatingModule,
     MatTabsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatDividerModule
   ],
   exports: [
     MatButtonModule,
