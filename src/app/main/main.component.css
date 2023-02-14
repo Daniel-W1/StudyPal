@@ -59,3 +59,25 @@
     font-size: 30px;
 
 }
+
+.start{
+    width: 200px;
+    padding: 13px;
+    position: absolute;
+    background-color: #3f454f;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    bottom: 30%;
+    left: 27%;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all .3s;
+}
+
+.start:hover{
+    opacity: .9;
+}
