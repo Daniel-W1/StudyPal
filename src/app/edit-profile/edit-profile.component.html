@@ -1,62 +1,49 @@
 <div class="container">
-  <h1>Edit profile</h1>
-  <div class="profile-pic-edit">
-    <div class="profile-pic">
-      <img src="../../assets/testimonials/chan_a.png" alt="" />
-    </div>
-    <button type="button" mat-raised-button (click)="fileInput.click()">
-      Choose File
-    </button>
-    <input
-      hidden
-      (change)="onFileSelected()"
-      #fileInput
-      type="file"
-      id="file"
-    />
-  </div>
-  <div class="info">
-    <mat-form-field appearance="fill">
-      <mat-label>Full Name</mat-label>
-      <input matInput placeholder="Full Name" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Bio</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Phone Number</mat-label>
-      <input matInput placeholder="Full Name" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Telegram Username</mat-label>
-      <input matInput placeholder="@username" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="email@example.com" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>CBE Account Number</mat-label>
-      <input matInput placeholder="Account Number" />
-    </mat-form-field>
-    <div class="resume">
-      <div>
-        <h2>Resume</h2>
-      </div>
-      <button type="button" mat-raised-button (click)="fileInput.click()">
-        Choose File
-      </button>
-      <input
-        hidden
-        (change)="onFileSelectedResume()"
-        #fileInput
-        type="file"
-        id="resume"
-      />
-    </div>
-    <div class="button-container">
-      <button id="confirm-btn" mat-flat-button color="primary">confirm</button>
-    </div>
-  </div>
+    <h1>Edit profile</h1>
+    <form #editProfileForm="ngForm" (ngSubmit)="onFormSubmit(editProfileForm.value)">
+        <div class="profile-pic-edit">
+            <div class="profile-pic">
+                <img #dislayImg id="displayImg" src="../../assets/testimonials/chan_a.png" alt="">
+            </div>
+            <button type="button" mat-raised-button (click)="profilePicInput.click()">Choose Image</button>
+            <input ngModel name="profilePic" hidden accept="image/*" (change)="displayNewProfile()" id="pfpInput"  #profilePicInput type="file">
+        </div>
+        <div class="info">
+            <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input name="name" ngModel matInput placeholder="Full Name">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Bio</mat-label>
+                <textarea name="bio" ngModel matInput></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input name="phoneNo" ngModel matInput placeholder="Full Name">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Telegram Username</mat-label>
+                <input name="TgUserName" ngModel matInput placeholder="@username">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input name="email" ngModel matInput placeholder="email@example.com">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>CBE Account Number</mat-label>
+                <input name="accNo" ngModel matInput placeholder="Account Number">
+            </mat-form-field>
+            <div class="resume">
+                <div>
+                    <h2>Resume</h2>
+                </div>
+                <button type="button" mat-raised-button (click)="resumeInput.click()">Choose File</button>
+                <input name="resume" (change)="displayFileNames()" ngModel hidden #resumeInput type="file" id="resume">
+                <div id="files"></div>
+            </div>
+            <div class="button-container">
+                <button id="confirm-btn" type="submit" mat-flat-button color="primary">confirm</button>
+            </div>
+        </div>
+    </form>
 </div>

@@ -6,19 +6,32 @@
 
 .container {
     width: 60%;
-    height: 400px;
     margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
+   
     padding: 3em;
     box-shadow: 0 0 1rem #ccc;
     text-align: center;
 }
-
+.form-container{
+    display: flex;
+    flex-direction: column;
+}
 h1 {
     font-size: 2em;
 }
 
 .post-btn{
     padding: 1 2em;
+}
+.documents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555;
+    flex-wrap: wrap;
+}
+.documents h2{
+    background-color: #eee;
+    padding: .5rem;
+    margin-top: .5rem;
 }
