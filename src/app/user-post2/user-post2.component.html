@@ -1,36 +1,38 @@
 <div class="post">
-    <div class="account">
-
-        <div class="account-part">
-            <div class="account-img"></div>
-            <div class="name">John Doe</div>
-            <div class="user_name">@johndoe</div>
-        </div>
-
-        <div class="edit">
-            <span>edit</span>
-            <mat-icon>edit</mat-icon>
-        </div>
+  <div class="account">
+    <div class="account-part">
+      <div class="account-img"></div>
+      <div class="name">John Doe</div>
+      <div class="user_name">@johndoe</div>
     </div>
 
-    <hr>
-    <div class="body">
-        <h2 class="title">
-            Calculus
-        </h2>
-
-        <p class="text">
-            What is the relationship between the derivative and the integral, and how can they be used to solve real-world problems?
-        </p>
-
-        <div class="footer">
-            <div class="tags">
-                <mat-chip-set>
-                    <mat-chip>Math</mat-chip>
-                    <mat-chip>Algorithms</mat-chip>
-                    <mat-chip>Algebra</mat-chip>
-                </mat-chip-set>
-            </div>
-        </div>
+    <div class="edit" routerLink="editPost">
+      <span>edit</span>
+      <mat-icon>edit</mat-icon>
     </div>
+  </div>
+
+  <hr />
+  <div class="body">
+    <h2 class="title">Calculus</h2>
+
+    <p class="text">
+      What is the relationship between the derivative and the integral, and how
+      can they be used to solve real-world problems?
+    </p>
+
+    <div class="footer">
+      <div class="tags">
+        <mat-chip-set>
+          <mat-chip>Math</mat-chip>
+          <mat-chip>Algorithms</mat-chip>
+          <mat-chip>Algebra</mat-chip>
+        </mat-chip-set>
+      </div>
+
+      <button class="applicants" routerLink="view">view applicants</button>
+    </div>
+
+    
+  </div>
 </div>

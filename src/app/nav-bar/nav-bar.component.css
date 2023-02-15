@@ -1,6 +1,9 @@
 .nav_bar{
     background-color: #3f454f;
-   
+    position:sticky;
+    top:0;
+    z-index: 100;
+
 }
 .hover-underline-animation {
     position: relative;

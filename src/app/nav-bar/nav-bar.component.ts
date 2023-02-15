@@ -23,7 +23,7 @@ export class NavBarComponent implements OnInit  {
       showOnDesktop:true,
     },
     {
-      label: 'My Topics',
+      label: 'My Posts',
       icon: 'library_books',
       showOnMobile:false,
       showOnTablet:false,
@@ -43,6 +43,14 @@ export class NavBarComponent implements OnInit  {
       showOnTablet:true,
       showOnDesktop:true,
     },
+    {
+      label:'Login',
+      icon:'login',
+      showOnMobile:true,
+      showOnTablet:true,
+      showOnDesktop:true,
+
+    }
     
   ];
 

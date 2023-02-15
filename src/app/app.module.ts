@@ -39,6 +39,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { PostsComponent } from './posts/posts.component';
 import { MyPostsComponent } from './my-posts/my-posts.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ApplicantsComponent } from './applicants/applicants.component';
+
 
 
 
@@ -65,7 +67,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     TaskComponent,
     PostsComponent,
     MyPostsComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    ApplicantsComponent
   ],
 imports: [
     BrowserModule,
