@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class LoginFormComponent {
     hide = true;
+    onFormSubmission(form: any){
+      console.log(form)
+    }
 }
