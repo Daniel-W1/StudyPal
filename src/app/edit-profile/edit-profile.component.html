@@ -1,50 +1,62 @@
-<p>edit-profile works!</p>
 <div class="container">
-    <h1>Edit profile</h1>
-    <div class="profile-pic-edit">
-        <div class="profile-pic">
-            <img src="../../assets/testimonials/chan_a.png" alt="">
-        </div>
-        <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
-        <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+  <h1>Edit profile</h1>
+  <div class="profile-pic-edit">
+    <div class="profile-pic">
+      <img src="../../assets/testimonials/chan_a.png" alt="" />
     </div>
-    <div class="info">
-        <mat-form-field appearance="fill">
-            <mat-label>Full Name</mat-label>
-            <input matInput placeholder="Full Name">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Bio</mat-label>
-            <textarea matInput></textarea>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Phone Number</mat-label>
-            <input matInput placeholder="Full Name">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Telegram Username</mat-label>
-            <input matInput placeholder="@username">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="email@example.com">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>CBE Account Number</mat-label>
-            <input matInput placeholder="Account Number">
-        </mat-form-field>
-        <div class="resume">
-            <div>
-                <h2>Resume</h2>
-            </div>
-            <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
-            <input hidden (change)="onFileSelectedResume()" #fileInput type="file" id="resume">
-        </div>
-        <div class="button-container">
-            <button id="confirm-btn" mat-flat-button color="primary">confirm</button>
-        </div>
+    <button type="button" mat-raised-button (click)="fileInput.click()">
+      Choose File
+    </button>
+    <input
+      hidden
+      (change)="onFileSelected()"
+      #fileInput
+      type="file"
+      id="file"
+    />
+  </div>
+  <div class="info">
+    <mat-form-field appearance="fill">
+      <mat-label>Full Name</mat-label>
+      <input matInput placeholder="Full Name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Bio</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Phone Number</mat-label>
+      <input matInput placeholder="Full Name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Telegram Username</mat-label>
+      <input matInput placeholder="@username" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="email@example.com" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>CBE Account Number</mat-label>
+      <input matInput placeholder="Account Number" />
+    </mat-form-field>
+    <div class="resume">
+      <div>
+        <h2>Resume</h2>
+      </div>
+      <button type="button" mat-raised-button (click)="fileInput.click()">
+        Choose File
+      </button>
+      <input
+        hidden
+        (change)="onFileSelectedResume()"
+        #fileInput
+        type="file"
+        id="resume"
+      />
     </div>
+    <div class="button-container">
+      <button id="confirm-btn" mat-flat-button color="primary">confirm</button>
+    </div>
+  </div>
 </div>
-
-
-
