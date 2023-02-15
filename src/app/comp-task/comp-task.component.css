@@ -21,7 +21,3 @@ button{
 .tags{
     padding-top: .5rem;
 }
-.button-container{
-    display: flex;
-    justify-content: center;
-}

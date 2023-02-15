@@ -17,4 +17,8 @@ export class SignUpFormComponent {
   
       return this.email.hasError('email') ? 'Not a valid email' : '';
     }
+
+    onFormSubmission(form:any){
+      console.log(form)
+    }
 }

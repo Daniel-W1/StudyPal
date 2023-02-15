@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class UserpostFormComponent {
 
-
+  displayFileNames(){
+    const displayDiv = document.getElementById('documents') as HTMLDivElement;
+    const input = document.getElementById('documentsInput') as HTMLInputElement;
+    const files = input.files as FileList;
+    displayDiv.innerHTML += `<p> ${files[0].name} </p>`
+  }
 }
