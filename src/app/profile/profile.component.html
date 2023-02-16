@@ -29,7 +29,7 @@
 
 
 
-    <div class="icon2"><mat-icon routerLink="edit">edit</mat-icon></div>
+    <div class="icon2" (click) = 'showModal()'><mat-icon>edit</mat-icon></div>
 
     <div class="rating">
         <ngx-star-rating  [id]="'rating'" [disabled]="true"></ngx-star-rating>

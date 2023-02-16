@@ -6,8 +6,7 @@
       <div class="user_name">@johndoe</div>
     </div>
 
-    <div class="edit" routerLink="editPost">
-      <span>edit</span>
+    <div class="edit" (click)="showEditForm()">
       <mat-icon>edit</mat-icon>
     </div>
   </div>
@@ -30,7 +29,7 @@
         </mat-chip-set>
       </div>
 
-      <button class="applicants" routerLink="view">view applicants</button>
+      <button mat-flat-button color="primary" routerLink="view">view applicants</button>
     </div>
 
     

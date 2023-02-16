@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { UserpostFormComponent } from '../userpost-form/userpost-form.component';
 
 @Component({
   selector: 'app-user-post2',
@@ -6,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-post2.component.css']
 })
 export class UserPost2Component {
-
+  constructor (private dialog: MatDialog){}
   srcResult: any;
   resumeResult: any;
   onFileSelected() {
@@ -34,6 +36,10 @@ export class UserPost2Component {
   
       reader.readAsArrayBuffer(inputNode.files[0]);
     }
+  }
+
+  showEditForm(){
+    this.dialog.open(UserpostFormComponent)
   }
 
 }

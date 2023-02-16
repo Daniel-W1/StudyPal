@@ -1,6 +1,6 @@
-<div class="container">
+
     <h1>Post a Question</h1>
-    <form #postForm="ngForm">
+    <form #postForm="ngForm" (ngSubmit)="onFormSubmit(postForm.value)">
         <div class="form-container">
             <mat-form-field appearance="fill">
                 <mat-label>Enter Question title</mat-label>
@@ -20,15 +20,14 @@
             </mat-form-field>
             <div class="documents">
                 <div>
-                    <h2>Upload any related documents</h2>
+                    <h2>Upload Files</h2>
                 </div>
                 <button type="button" mat-raised-button (click)="documentsInput.click()">Choose Files</button>
                 <input name="documents" (change)="displayFileNames()" ngModel hidden #documentsInput type="file" id="documentsInput">
-                <div id="documents"></div>
             </div>
+            <div id="documents"></div>
             <div class="button-container">
                 <button id="post" type="submit" mat-flat-button color="primary" class="post-btn">Post</button>
             </div>
         </div>
     </form>
-</div>

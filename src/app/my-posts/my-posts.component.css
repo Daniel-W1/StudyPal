@@ -1,0 +1,12 @@
+.container{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.addPost-btn{
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    right: 3rem;
+    bottom: 3rem;
+    font-size: 2rem;
+}
