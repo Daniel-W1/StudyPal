@@ -13,4 +13,7 @@ export class UserpostFormComponent {
     const files = input.files as FileList;
     displayDiv.innerHTML += `<p> ${files[0].name} </p>`
   }
+  onFormSubmit(form: any){
+    console.log(form);
+  }
 }

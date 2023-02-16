@@ -1,20 +1,17 @@
 :host {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 4rem;
 }
 
-.container {
-    width: 60%;
-    margin: 2rem auto;
-   
-    padding: 3em;
-    box-shadow: 0 0 1rem #ccc;
-    text-align: center;
-}
 .form-container{
     display: flex;
     flex-direction: column;
+    width: 40rem;
+}
+input{
+    width: 100%;
 }
 h1 {
     font-size: 2em;
@@ -22,6 +19,12 @@ h1 {
 
 .post-btn{
     padding: 1 2em;
+    margin: 2rem;
+}
+.button-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 .documents{
     display: flex;

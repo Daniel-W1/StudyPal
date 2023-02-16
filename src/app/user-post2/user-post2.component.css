@@ -1,5 +1,5 @@
 .post{
-    width: 80%;
+    width: 80rem;
     height: 300px;
     max-height: 400px;
     border-radius: 2em;
@@ -50,6 +50,7 @@ hr{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .money{

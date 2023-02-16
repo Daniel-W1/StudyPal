@@ -40,7 +40,7 @@ import { PostsComponent } from './posts/posts.component';
 import { MyPostsComponent } from './my-posts/my-posts.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ApplicantsComponent } from './applicants/applicants.component';
-
+import {  MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -89,7 +89,8 @@ imports: [
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   exports: [
     MatButtonModule,
