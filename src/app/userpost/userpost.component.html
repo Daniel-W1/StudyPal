@@ -1,29 +1,32 @@
-<div class="post">
-    <div class="account">
-        <div class="account-img"></div>
-        <div class="name">John Doe</div>
-        <div class="user_name">@johndoe</div>
+<div [ngClass]="'post'">
+    
+
+    <div class="account" >
+        <!-- <img [ngClass]="'account-img'" src = "{{post.img}}" alt="">
+        <div class="name">{{userInfo.id}}</div>
+        <div class="user_name">{{userInfo.title}}</div> -->
     </div>
 
-    <hr>
-    <div class="body">
-        <h2 class="title">
-            Calculus
-        </h2>
 
-        <p class="text">
-            What is the relationship between the derivative and the integral, and how can they be used to solve real-world problems?
-        </p>
+<div [ngClass]="'body'">
+    <h2 class="title">
+        {{post.title}}
+    </h2>
 
-        <div class="footer">
-            <div class="tags">
-                <mat-chip-set>
-                    <mat-chip>Math</mat-chip>
-                    <mat-chip>Algorithms</mat-chip>
-                    <mat-chip>Algebra</mat-chip>
-                </mat-chip-set>
-            </div>
-            <button mat-flat-button color="primary">Apply</button>
+    <p class="text">
+        {{post.desc}}
+    </p>
+
+    <div [ngClass]="'footer'">
+        <div [ngClass]="'tags'">
+            <mat-chip-set>
+                <mat-chip *ngFor="let tag of post.tag">
+                    {{tag}}
+                </mat-chip>
+
+            </mat-chip-set>
         </div>
+        <button (click)="apply()" mat-flat-button color="primary">{{applyText}}</button>
     </div>
+
 </div>

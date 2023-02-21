@@ -1,0 +1,28 @@
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    border-radius: 0.1em;
+    margin: 2rem;
+}
+
+input{
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.deposit-btn{
+    padding: 1 2em;
+    margin: 2rem;
+    
+}
+
+.btn-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

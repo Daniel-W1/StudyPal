@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-comp-task',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./comp-task.component.css']
 })
 export class CompTaskComponent {
-
+  @Input() task: any;
 }

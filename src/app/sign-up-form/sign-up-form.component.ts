@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import {FormControl, Validators, ReactiveFormsModule} from '@angular/forms';
+import { map } from 'rxjs';
+import { HttpClient} from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up-form',
@@ -9,6 +12,12 @@ import {FormControl, Validators, ReactiveFormsModule} from '@angular/forms';
 export class SignUpFormComponent {
     hide = true;
     email = new FormControl('', [Validators.required, Validators.email]);
+
+    myUrl:string = "https://deploystudypalbackend-development.up.railway.app/auth/signup"
+
+    constructor(private http:HttpClient, private router:Router){
+
+    }
   
     getErrorMessage() {
       if (this.email.hasError('required')) {
@@ -20,5 +29,12 @@ export class SignUpFormComponent {
 
     onFormSubmission(form:any){
       console.log(form)
+
+      this.http.post<any>(this.myUrl, form).subscribe((res)=>{
+        console.log(res)
+        // localStorage.setItem("tokenSignup",res.access_token)
+        this.router.navigate(["/Login"])
+     
+      })
     }
 }

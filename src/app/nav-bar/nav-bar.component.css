@@ -5,6 +5,9 @@
     z-index: 100;
 
 }
+.activeNavbar{
+    background-color: #3f9cda;
+}
 .hover-underline-animation {
     position: relative;
     color: #FFFFFF;

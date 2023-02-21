@@ -40,8 +40,11 @@ import { PostsComponent } from './posts/posts.component';
 import { MyPostsComponent } from './my-posts/my-posts.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ApplicantsComponent } from './applicants/applicants.component';
-import {  MatDialogModule } from '@angular/material/dialog';
-
+import {  MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { ProfileServiceService } from './services/profile-service.service';
+import { DepositComponent } from './deposit/deposit.component';
+import { WithdrawComponent } from './withdraw/withdraw.component';
 
 
 @NgModule({
@@ -68,7 +71,10 @@ import {  MatDialogModule } from '@angular/material/dialog';
     PostsComponent,
     MyPostsComponent,
     EditProfileComponent,
-    ApplicantsComponent
+    ApplicantsComponent,
+    DepositComponent,
+    WithdrawComponent,
+    
   ],
 imports: [
     BrowserModule,
@@ -90,7 +96,8 @@ imports: [
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   exports: [
     MatButtonModule,
@@ -99,7 +106,8 @@ imports: [
     MatIconModule,
     MatCardModule 
   ],
-  providers: [],
+  providers: [ProfileServiceService,
+    { provide: MAT_DIALOG_DATA, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

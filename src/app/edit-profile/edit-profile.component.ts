@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-edit-profile',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent {
+
+  urlProfileEdit:string = "https://deploystudypalbackend-development.up.railway.app/profile/edit-profile"
+
+  constructor(private http:HttpClient){}
 
   displayNewProfile(){
     const pfpDisplay = document.getElementById("displayImg") as HTMLImageElement;
@@ -20,6 +25,11 @@ export class EditProfileComponent {
 
   onFormSubmit(form: any){
     console.log(form)
+    this.http.put(this.urlProfileEdit,form,{headers: new HttpHeaders({"Authorization": `Bearer ${localStorage.getItem("token")}`})}).subscribe(
+      (res) => {
+        console.log(res)
+      }
+    )
   }
 
   displayFileNames(){

@@ -3,7 +3,7 @@
     <form #signupForm="ngForm" (ngSubmit)="onFormSubmission(signupForm.value)">
         <mat-form-field appearance="fill">
             <mat-label>Enter Your Full Name</mat-label>
-            <input ngModel name="name" matInput placeholder="Full Name" required>
+            <input ngModel name="fullname" matInput placeholder="Full Name" required>
             <mat-error>{{getErrorMessage()}}</mat-error>
         </mat-form-field>
         <br>

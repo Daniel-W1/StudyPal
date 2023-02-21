@@ -1,15 +1,8 @@
 <mat-tab-group>
     <mat-tab routerLink='pendingTask' label="Pending Tasks">
-        <app-task></app-task> 
-        <app-task></app-task> 
-        <app-task></app-task> 
-        <app-task></app-task> 
+        <app-task *ngFor="let t of pendingTasks" [task]="t"></app-task> 
     </mat-tab>
     <mat-tab routerLink='completedTask' label="Completed Tasks">
-        <app-comp-task></app-comp-task>
-        <app-comp-task></app-comp-task>
-        <app-comp-task></app-comp-task>
-        <app-comp-task></app-comp-task>
-        <app-comp-task></app-comp-task>
+        <app-comp-task *ngFor="let t of completedTasks" [task]="t"></app-comp-task>
     </mat-tab>
   </mat-tab-group>

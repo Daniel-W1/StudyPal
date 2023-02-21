@@ -1,30 +1,19 @@
 <div class="card">
-    <h1>Title bro</h1>
+    <h1>{{task.title}}</h1>
     <div class="body">
         <p>
-            "Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip 
-            ex ea commodo consequat. Duis aute irure dolor 
-            in reprehenderit in voluptate velit esse cillum 
-            dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum."
+            {{task.desc}}
         </p>
     </div>
     <div class="tags">
         <mat-chip-set>
-            <mat-chip>Math</mat-chip>
-            <mat-chip>Algorithms</mat-chip>
-            <mat-chip>Algebra</mat-chip>
+            <mat-chip *ngFor="let tag of task.tag">{{tag}}</mat-chip>
         </mat-chip-set>
     </div>
     <div class="info">
         <p>Asked By: Daniel</p>
         <div class="buttons">
-            <button mat-flat-button color="primary">Complete</button>
+            <button mat-flat-button color="primary" (click)="complete()">Complete</button>
             <button mat-flat-button color="warn">cancel</button>
         </div>
     </div>

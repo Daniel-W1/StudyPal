@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ApplicantProfile } from '../applicant-profile';
 
 @Component({
@@ -6,20 +8,26 @@ import { ApplicantProfile } from '../applicant-profile';
   templateUrl: './applicants.component.html',
   styleUrls: ['./applicants.component.css']
 })
-export class ApplicantsComponent {
+export class ApplicantsComponent implements OnInit {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient){}
+  url: string = "https://deploystudypalbackend-development.up.railway.app/asked-topic/get-applicants"
+  url1: string = "https://deploystudypalbackend-development.up.railway.app/asked-topic/accept-applicant"
+  applicants: any;
 
-  Applicants:ApplicantProfile[] = [
-    {
-      picture:"assets/codeaddict.jpg",
-      username:"@Dani",
-      name:"Daniel",
-      rating:"3",
-      aboutme: "fjksdhfkjsdghifjriuthejifgykudfthfkjdh",
-      phoneNumber:"67868709",
-      email:"fjdjksfhks@gmial.com",
-      expertise:["dsa","linkedList","graph"],
-    }
-   
 
-  ]
-}
+  acceptApplicant(applicantid: string){
+    this.http.put(this.url1, {topicId: this.data.id, applicantId: applicantid}, {headers: new HttpHeaders({"Authorization": `Bearer ${localStorage.getItem("token")}`})}).subscribe(
+      (res) => {
+        console.log(res)
+      }
+    )
+  }
+  
+  ngOnInit(): void {
+      this.http.put(this.url, {id: this.data.id}, {headers: new HttpHeaders({"Authorization": `Bearer ${localStorage.getItem("token")}`})}).subscribe(
+        (res) => {
+          this.applicants = res;
+          console.log(res);
+        }
+      )}
+  }

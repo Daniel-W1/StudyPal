@@ -1,3 +1,11 @@
+:host{
+    padding: 4em;
+}
+.container{
+    padding: 4em;
+    min-width: 45em;
+    height: 50em;
+}
 .post{
     width: 80%;
 
@@ -24,7 +32,7 @@
     
 }
 .name{
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 0 .5em;
 }
 
@@ -59,7 +67,7 @@ hr{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-image: url("../../assets/codeaddict2.jpg");
+    /* background-image: url("{{}}"); */
     background-position: center;
     background-size: cover;
 
