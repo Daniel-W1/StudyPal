@@ -17,38 +17,41 @@ const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
 
   {
+    path:"Home",
+    component:HomeComponent
+  },
+  {
     path:"Tasks",
     component:TasksComponent
   },
  
   {
-    path:"Username",
+    path:"Profile",
     component:ProfileComponent
   },
   {
-    path:"Username/edit",
+    path:"Profile/edit",
     component:EditProfileComponent
-  },
-  {
-    path:"Home",
-    component:HomeComponent
-  },
-  {
-    path:"Home/Login",
-    component:LoginFormComponent
   },
   {
     path:"Login",
     component:LoginFormComponent
   },
+  // {
+  //   path:"Home/Login",
+  //   component:LoginFormComponent
+  
+  // },
+  // {
+  //   path:"Login/signup",
+  //   component:SignUpFormComponent
+  // },
   {
-    path:"Login/signup",
+    path:"signup",
     component:SignUpFormComponent
+
   },
-  {
-    path:"Home/Login/signup",
-    component:SignUpFormComponent
-  },
+
   {
     path:"My Posts",
     component:MyPostsComponent
@@ -59,6 +62,7 @@ const routes: Routes = [
   },
   { path:"My Posts/view",
     component:ApplicantsComponent
+
 
   },
   {

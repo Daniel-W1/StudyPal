@@ -1,4 +1,4 @@
-<div class="post">
+<!-- <div class="post">
     <div class="account">
         <div class="account-img"></div>
         <div class="name">John Doe</div>
@@ -23,47 +23,26 @@
                     <mat-chip>Algebra</mat-chip>
                 </mat-chip-set>
             </div>
-        </div>
+        </div> -->
 
-        <div class="applicants">
-            
-
+<div class="container">
+        <div [ngClass]="'applicants'">
             <h1>Applicants</h1>
-            <div class="applicant">
 
-                <div class="left-part">
+            <div [ngClass]="'applicant'" *ngFor="let person of applicants">
+                <div [ngClass]="'left-part'">
 
-                    <div class="profile"></div>
-                    <div class="name">John Doe</div>
-                    <div class="user_name">@johndoe</div>
+                    
+                    <img [ngClass]="'profile'" src="..assets/codeaddict.jpg" alt="">
+                    
+                    <div [ngClass]="'name'">{{person.name}}</div>
+                    <div [ngClass]="'user_name'">{{person.username}}</div>
                 </div>
-                <button class="view-profile">
-                    View Profile
-                </button>
-                
-            </div>
-            <div class="applicant">
-                <div class="left-part">
-
-                    <div class="profile"></div>
-                    <div class="name">John Doe</div>
-                    <div class="user_name">@johndoe</div>
-                </div>
-                <button class="view-profile">
-                    View Profile
+                <button mat-flat-button color="primary" (click)="acceptApplicant(person._id)">
+                    Accept
                 </button>
             </div>
-            <div class="applicant">
-                <div class="left-part">
 
-                    <div class="profile"></div>
-                    <div class="name">John Doe</div>
-                    <div class="user_name">@johndoe</div>
-                </div>
-                <button class="view-profile">
-                    View Profile
-                </button>
-            </div>
         </div>
     </div>
-</div>
+<!-- </div> -->

@@ -13,23 +13,20 @@
 
   <hr />
   <div class="body">
-    <h2 class="title">Calculus</h2>
+    <h2 class="title">{{post.title}}</h2>
 
     <p class="text">
-      What is the relationship between the derivative and the integral, and how
-      can they be used to solve real-world problems?
+     {{post.desc}}
     </p>
 
     <div class="footer">
       <div class="tags">
         <mat-chip-set>
-          <mat-chip>Math</mat-chip>
-          <mat-chip>Algorithms</mat-chip>
-          <mat-chip>Algebra</mat-chip>
+          <mat-chip *ngFor="let tag of post.tag">{{tag}}</mat-chip>
         </mat-chip-set>
       </div>
 
-      <button mat-flat-button color="primary" routerLink="view">view applicants</button>
+      <button mat-flat-button (click)="showApplicants()" color="primary">view applicants</button>
     </div>
 
     

@@ -1,0 +1,15 @@
+<form #depositForm="ngForm" (ngSubmit)="onFormSubmit(depositForm.value)">
+
+    <div class="formContainer">
+        <h1>Deposit</h1>
+        <mat-form-field appearance="fill">
+            <mat-label>How Much Money Do you wan't to deposit?</mat-label>
+            <input name="amount" ngModel matInput>
+        </mat-form-field>
+        <div class="btn-container">
+            <button mat-flat-button class="deposit-btn" color="primary">Deposit</button>
+            <a *ngIf="checkoutUrl" mat-flat-button  class="deposit-btn" color="primary" href="{{checkoutUrl}}">Go to payment</a>
+        </div>
+
+    </div>
+</form>

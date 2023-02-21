@@ -6,12 +6,12 @@
                 <img #dislayImg id="displayImg" src="../../assets/testimonials/chan_a.png" alt="">
             </div>
             <button type="button" mat-raised-button (click)="profilePicInput.click()">Choose Image</button>
-            <input ngModel name="profilePic" hidden accept="image/*" (change)="displayNewProfile()" id="pfpInput"  #profilePicInput type="file">
+            <input hidden accept="image/*" (change)="displayNewProfile()" id="pfpInput"  #profilePicInput type="file">
         </div>
         <div class="info">
             <mat-form-field appearance="fill">
                 <mat-label>Full Name</mat-label>
-                <input name="name" ngModel matInput placeholder="Full Name">
+                <input name="fullname" ngModel matInput placeholder="Full Name">
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Bio</mat-label>
@@ -19,26 +19,26 @@
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Phone Number</mat-label>
-                <input name="phoneNo" ngModel matInput placeholder="Full Name">
+                <input name="phone" ngModel matInput placeholder="Full Name">
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Telegram Username</mat-label>
-                <input name="TgUserName" ngModel matInput placeholder="@username">
+                <input name="telegram" ngModel matInput placeholder="@username">
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Email</mat-label>
                 <input name="email" ngModel matInput placeholder="email@example.com">
             </mat-form-field>
             <mat-form-field appearance="fill">
-                <mat-label>CBE Account Number</mat-label>
-                <input name="accNo" ngModel matInput placeholder="Account Number">
+                <mat-label>Hourly rate</mat-label>
+                <input name="tutorfee" ngModel matInput placeholder="Hourly rate">
             </mat-form-field>
             <div class="resume">
                 <div>
                     <h2>Resume</h2>
                 </div>
                 <button type="button" mat-raised-button (click)="resumeInput.click()">Choose File</button>
-                <input name="resume" (change)="displayFileNames()" ngModel hidden #resumeInput type="file" id="resume">
+                <input (change)="displayFileNames()" hidden #resumeInput type="file" id="resume">
                 <div id="files"></div>
             </div>
             <div class="button-container">

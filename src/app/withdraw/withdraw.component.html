@@ -1,0 +1,37 @@
+<form #depositForm="ngForm" (ngSubmit)="onFormSubmit(depositForm.value)">
+
+    <div class="formContainer">
+        <h1>Withdraw?</h1>
+        <mat-form-field appearance="fill">
+            <mat-label>Your Account Name</mat-label>
+            <input name="accountName" ngModel matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>your bank </mat-label>
+                <mat-select [(ngModel)]="selectedBank" name="selectedBank" >
+                    <mat-option *ngFor="let bank of banks" [value]="bank.bankName">
+                    {{bank.bankName}}
+                    </mat-option>
+                </mat-select>
+
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>your bank account number?</mat-label>
+            <input name="accountNumber" ngModel matInput>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>How Much Money Do you wan't to withdraw?</mat-label>
+            <input name="amount" ngModel matInput>
+        </mat-form-field>
+
+
+
+        <div class="btn-container">
+            <button mat-flat-button class="deposit-btn" color="primary" >Withdraw</button>
+        </div>
+
+    </div>
+</form>

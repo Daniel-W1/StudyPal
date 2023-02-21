@@ -1,13 +1,24 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,Input,OnChanges,OnInit, SimpleChange, SimpleChanges } from '@angular/core';
 import { MenuItems } from '../menu-items';
+import { ProfileComponent } from '../profile/profile.component';
+// import { RoutLinkService } from '../rout-link.service';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  styleUrls: ['./nav-bar.component.css'],
+  // providers:[ProfileComponent]
 })
-export class NavBarComponent implements OnInit  {
-  menuItems:MenuItems[] = [
+export class NavBarComponent  {
+  
+  
+  // constructor(private routLinkService:RoutLinkService){
+  // }
+  
+  // goTo:string = this.routLinkService.getRouteLink()
+
+
+    menuItems:MenuItems[] = [
     {
       label: 'Home',
       icon: 'home',
@@ -37,7 +48,7 @@ export class NavBarComponent implements OnInit  {
       showOnDesktop:true,
     },
     {
-      label: 'Username',
+      label: 'Profile',
       icon: 'account_circle',
       showOnMobile:false,
       showOnTablet:true,
@@ -49,18 +60,16 @@ export class NavBarComponent implements OnInit  {
       showOnMobile:true,
       showOnTablet:true,
       showOnDesktop:true,
-
     }
     
   ];
 
-  constructor() { }
 
 
-
-  ngOnInit(): void {
+  // ngOnInit(): void{
+  //   // console.log(this.goTo)
     
-  }
+  // }
   
 
 
